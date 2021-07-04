@@ -21,11 +21,11 @@ int main() {
 
   double J = 0;     // Massentraegheitsmoment
   double m = M / N; // Masse eines Massenpunktes
-  for (int i = 0; i < N; ++i) {
+  for (int i = 0; i < N; i++) { // Zusammenhang x und i ???
     Vektor x = zm->punkt();
-    // Abstand Punkt x und Gerade a + t*u
-    // Vektor n = ...;//Normalenvektor x-a kreuz u
-    double r = 0; //|n|/|u|
+    double d = (((x-a).kreuz(u)).betrag())/(u.betrag()); // Abstand Punkt x und Gerade a + t*u
+    Vektor n = (x-a).kreuz(u); //Normalenvektor x-a kreuz u
+    double r = (n.betrag())/(u.betrag()); //|n|/|u|
     // std::cout << x << " :" << r << std::endl;
     // addiere Beitrag des Massenpunktes zum Traegheitsmoment
     J += m * r * r;

@@ -14,6 +14,6 @@ Vektor Vollzylinder::punkt() {
   double z = l_ * (rand() / (double)RAND_MAX - 0.5);
 
   double x = 0;
-  double y = 0;
+  double y = R*sin(phi);
   return Vektor(x, y, z);
-};
+}
