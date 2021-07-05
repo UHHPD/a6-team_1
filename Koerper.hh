@@ -3,18 +3,10 @@
 
 #include "Vektor.hh"
 
-class Koerper {
+class Koerper{
 public:
-  (double nr, double nl);
-
-  Vektor punkt();
-  std::string name()
-  {
-    return "Koerper";
-  }
-
-private:
-  double r_, l_;
+  virtual Vektor punkt() = 0;
+  virtual std::string name() {return "Koerper";}
 };
 
 #endif
